@@ -1,24 +1,24 @@
 {
-  "publisher": "antfu",
-  "name": "ext-name",
-  "displayName": "ext-name",
-  "version": "0.0.0",
+  "publisher": "talljack",
+  "name": "vscode-quick-fold",
+  "displayName": "vscode-quick-fold",
+  "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@8.10.5",
-  "description": "",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "packageManager": "pnpm@9.1.1",
+  "description": "Quick Fold/unFold all code",
+  "author": "talljack <yugang.cao12@gmail.com>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/ext-name#readme",
+  "funding": "https://github.com/sponsors/talljack",
+  "homepage": "https://github.com/talljack/vscode-quick-fold",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antfu/ext-name"
+    "url": "https://github.com/talljack/vscode-quick-fold"
   },
   "bugs": {
-    "url": "https://github.com/antfu/ext-name/issues"
+    "url": "https://github.com/talljack/vscode-quick-fold/issues"
   },
   "sponsor": {
-    "url": "https://github.com/sponsors/antfu"
+    "url": "https://github.com/sponsors/talljack"
   },
   "categories": [
     "Other"
@@ -31,9 +31,18 @@
   "engines": {
     "vscode": "^1.83.0"
   },
-  "activationEvents": [
-    "onStartupFinished"
-  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.foldAl",
+        "title": "Fold All Code"
+      },
+      {
+        "command": "extension.unfoldAl",
+        "title": "Unfold All Code"
+      }
+    ]
+  },
   "scripts": {
     "build": "tsup src/index.ts --external vscode",
     "dev": "nr build --watch",
@@ -43,22 +52,21 @@
     "pack": "vsce package --no-dependencies",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp && nr publish"
+    "release": "nr publish"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^1.1.1",
-    "@antfu/ni": "^0.21.9",
-    "@types/node": "^20.9.0",
-    "@types/vscode": "^1.84.1",
-    "@vscode/vsce": "^2.22.0",
-    "bumpp": "^9.2.0",
-    "eslint": "^8.53.0",
-    "esno": "^4.0.0",
-    "pnpm": "^8.10.5",
-    "rimraf": "^5.0.5",
-    "tsup": "^7.2.0",
-    "typescript": "^5.2.2",
-    "vite": "^4.5.0",
-    "vitest": "^0.34.6"
+    "talljack-eslint-config": "^0.2.6",
+    "@antfu/ni": "^0.21.12",
+    "@types/node": "^20.12.12",
+    "@types/vscode": "^1.83.0",
+    "@vscode/vsce": "^2.26.1",
+    "eslint": "^9.2.0",
+    "esno": "^4.7.0",
+    "pnpm": "^9.1.1",
+    "rimraf": "^5.0.7",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vitest": "^1.6.0"
   }
 }

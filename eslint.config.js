@@ -1,15 +1,7 @@
 // @ts-check
-const antfu = require('@antfu/eslint-config').default
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const createEslintConfig = require('talljack-eslint-config').default
 
-module.exports = antfu(
-  {
-    ignores: [
-      // eslint ignore globs here
-    ],
-  },
-  {
-    rules: {
-      // overrides
-    },
-  },
-)
+module.exports = createEslintConfig({
+  typescript: true,
+})

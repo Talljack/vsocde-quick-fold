@@ -2,7 +2,7 @@
   "publisher": "talljack",
   "name": "vscode-quick-fold",
   "displayName": "vscode-quick-fold",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "packageManager": "pnpm@9.1.1",
   "description": "Quick Fold/unFold all code",
@@ -34,11 +34,11 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.foldAl",
+        "command": "extension.foldAll",
         "title": "Fold All Code"
       },
       {
-        "command": "extension.unfoldAl",
+        "command": "extension.unfoldAll",
         "title": "Unfold All Code"
       }
     ]
